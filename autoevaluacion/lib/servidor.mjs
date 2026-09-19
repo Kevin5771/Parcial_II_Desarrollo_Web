@@ -26,7 +26,6 @@ export function iniciarServidor({ cwd, puerto, dbPath }) {
     env.DB_PATH = dbPath;
   }
 
-  // Inicia Node directamente para evitar el problema de npm.cmd en Windows.
   const proceso = spawn(
     process.execPath,
     ['--disable-warning=ExperimentalWarning', 'src/servidor.js'],
